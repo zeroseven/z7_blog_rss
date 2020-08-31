@@ -1,0 +1,9 @@
+# Add the following site configuration to your project:
+#
+# imports:
+#  - { resource: "EXT:z7_blog_rss/Configuration/Site/config.yaml" }
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    map:
+      rss.xml: 1598538810

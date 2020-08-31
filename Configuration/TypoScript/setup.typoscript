@@ -1,0 +1,64 @@
+#####################################################
+# Extend plugin settings
+#####################################################
+plugin.tx_z7blog.settings.rss.typeNum = {$plugin.tx_z7blog.settings.rss.typeNum}
+
+#####################################################
+# Register template
+#####################################################
+plugin.tx_z7blog.view.templateRootPaths.1598538810 = EXT:z7_blog_rss/Resources/Private/Templates/
+
+##################################################
+# RSS feed
+##################################################
+blogRSSFeed = PAGE
+blogRSSFeed {
+
+  # Configure page
+  typeNum = {$plugin.tx_z7blog.settings.rss.typeNum}
+  config {
+    disableAllHeaderCode = 1
+    xhtml_cleaning = 0
+    admPanel = 0
+    debug = 0
+    disablePrefixComment = 1
+    metaCharset = utf-8
+    index_enable = 0
+    additionalHeaders {
+      10.header = Content-Type:application/rss+xml;charset=utf-8
+      20.header = X-Robots-Tag:noindex
+      30.header = X-TYPO3-Extension:z7_blog
+    }
+  }
+
+  # Generate page content
+  10 = CONTENT
+  10 {
+
+    # Search for content elements
+    table = tt_content
+    select {
+      where = CType IN('z7blog_list','z7blog_static')
+      max = 1
+      orderBy = sorting
+      pidInList = this
+    }
+
+    # Render list action of extension z7_blog
+    renderObj = USER
+    renderObj {
+      userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+      extensionName = Z7Blog
+      pluginName = List
+      format = xml
+    }
+
+    # … or throw an exception, if no configuration found
+    stdWrap.ifEmpty.cObject = USER
+    stdWrap.ifEmpty.cObject {
+      userFunc = Zeroseven\Z7BlogRss\UserFunc\Exception->throw
+      status = 404
+      message = No plugin for RSS configuration found on this page.
+    }
+  }
+}

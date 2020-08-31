@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="z7_blog">
+		<header/>
+		<body>
+
+			<!-- RSS Channel (add translations in your project) -->
+			<trans-unit id="channel.title">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="channel.generator">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="channel.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="channel.copyright">
+				<source></source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
