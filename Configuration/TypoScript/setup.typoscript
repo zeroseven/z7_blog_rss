@@ -1,7 +1,13 @@
 #####################################################
 # Extend plugin settings
 #####################################################
-plugin.tx_z7blog.settings.rss.typeNum = {$plugin.tx_z7blog.settings.rss.typeNum}
+plugin.tx_z7blog.settings.rss {
+  typeNum = {$plugin.tx_z7blog.settings.rss.typeNum}
+  item.image {
+    width = {$plugin.tx_z7blog.settings.rss.item.image.width}
+    height = {$plugin.tx_z7blog.settings.rss.item.image.height}
+  }
+}
 
 #####################################################
 # Register template

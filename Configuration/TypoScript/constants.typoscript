@@ -1,1 +1,10 @@
-plugin.tx_z7blog.settings.rss.typeNum = 1598538810
+plugin.tx_z7blog.settings.rss {
+  typeNum = 1598538810
+  # customsubcategory=rss=RSS Feed
+  item.image {
+    # cat=plugin.tx_z7blog/rss/100; type=string; label=Image width of item image
+    width = 1920m
+    # cat=plugin.tx_z7blog/rss/200; type=string; label=Image height of item image
+    height = 1920m
+  }
+}
