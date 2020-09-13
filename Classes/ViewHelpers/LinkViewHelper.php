@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Zeroseven\Z7BlogRss\ViewHelpers;
 
@@ -10,7 +12,6 @@ use Zeroseven\Z7Blog\Service\RootlineService;
 
 class LinkViewHelper extends AbstractTagBasedViewHelper
 {
-
     protected $tagName = 'link';
 
     public function render(): string
@@ -21,12 +22,11 @@ class LinkViewHelper extends AbstractTagBasedViewHelper
             ->setCreateAbsoluteUri(true)
             ->build();
 
-        if($link) {
+        if ($link) {
             $this->tag->setContent($link);
             return $this->tag->render();
         }
 
         return '';
     }
-
 }

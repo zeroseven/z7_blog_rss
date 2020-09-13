@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Zeroseven\Z7BlogRss\ViewHelpers;
 
@@ -7,7 +9,6 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 
 class EnclosureViewHelper extends ImageViewHelper
 {
-
     protected $escapeOutput = false;
 
     public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext)
@@ -31,7 +32,5 @@ class EnclosureViewHelper extends ImageViewHelper
 
         // Return url only
         return sprintf('<enclosure url="%s" />', $url);
-
     }
-
 }
