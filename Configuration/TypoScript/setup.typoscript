@@ -54,6 +54,7 @@ blogRSSFeed {
     renderObj = USER
     renderObj {
       userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+      vendorName = Zeroseven
       extensionName = Z7Blog
       pluginName = List
       format = xml
