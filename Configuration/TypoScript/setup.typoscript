@@ -10,9 +10,9 @@ plugin.tx_z7blog.settings.rss {
 }
 
 #####################################################
-# Register template
+# Register template (number between 1 and 99)
 #####################################################
-plugin.tx_z7blog.view.templateRootPaths.1598538810 = EXT:z7_blog_rss/Resources/Private/Templates/
+plugin.tx_z7blog.view.templateRootPaths.1 = EXT:z7_blog_rss/Resources/Private/Templates/
 
 ##################################################
 # RSS feed
