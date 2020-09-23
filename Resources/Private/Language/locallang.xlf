@@ -5,16 +5,16 @@
 		<body>
 
 			<!-- RSS Channel (add translations in your project) -->
-			<trans-unit id="channel.title">
+			<trans-unit id="rss.channel.title">
 				<source></source>
 			</trans-unit>
-			<trans-unit id="channel.generator">
+			<trans-unit id="rss.channel.generator">
 				<source></source>
 			</trans-unit>
-			<trans-unit id="channel.description">
+			<trans-unit id="rss.channel.description">
 				<source></source>
 			</trans-unit>
-			<trans-unit id="channel.copyright">
+			<trans-unit id="rss.channel.copyright">
 				<source></source>
 			</trans-unit>
 

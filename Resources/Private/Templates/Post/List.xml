@@ -2,10 +2,10 @@
 <html xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:blog="http://typo3.org/ns/Zeroseven/Z7Blog/ViewHelpers" xmlns:blogrss="http://typo3.org/ns/Zeroseven/Z7BlogRss/ViewHelpers" data-namespace-typo3-fluid="true">
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>{f:translate(key:'channel.title', extensionName: 'z7_blog_rss', default: 'Blog-RSS')}</title>
-		<generator>{f:translate(key:'channel.generator', extensionName: 'z7_blog_rss', default: 'TYPO3 (powered by z7_blog)')}</generator>
-		<f:if condition="{f:translate(key:'channel.description', extensionName: 'z7_blog_rss')}"><description>{f:translate(key:'channel.description', extensionName: 'z7_blog_rss')}</description></f:if>
-		<f:if condition="{f:translate(key:'channel.copyright', extensionName: 'z7_blog_rss')}"><copyright>{f:translate(key:'channel.copyright', extensionName: 'z7_blog_rss')}</copyright></f:if>
+		<title>{f:translate(key:'rss.channel.title', extensionName: 'z7_blog_rss', default: 'Blog-RSS')}</title>
+		<generator>{f:translate(key:'rss.channel.generator', extensionName: 'z7_blog_rss', default: 'TYPO3 (powered by z7_blog)')}</generator>
+		<f:if condition="{f:translate(key:'rss.channel.description', extensionName: 'z7_blog_rss')}"><description>{f:translate(key:'rss.channel.description', extensionName: 'z7_blog_rss')}</description></f:if>
+		<f:if condition="{f:translate(key:'rss.channel.copyright', extensionName: 'z7_blog_rss')}"><copyright>{f:translate(key:'rss.channel.copyright', extensionName: 'z7_blog_rss')}</copyright></f:if>
 		<blogrss:link />
 		<blogrss:language />
 		<pubDate>{f:format.date(date:'now', format:'r')}</pubDate>
