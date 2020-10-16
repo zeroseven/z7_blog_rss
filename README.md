@@ -1,21 +1,19 @@
 # RSS feed for [z7_blog](https://github.com/zeroseven/z7_blog)
 
 You want a RSS feed for your blog, be super flexible and with the least amount of work possible? You've come to the right place.
-
-:one: Install extension  
-:two: Go to URL  
-:three: Done!
+Install the extension, enter the URL and you're done!
 
 ## :wrench: Installation
 
-Get this extension via `composer req zeroseven/z7-blog-rss`. 
+Get this extension via `composer req zeroseven/z7-blog-rss`.
 
-## Go to the RSS feed
+## :tada: Go to the RSS feed
 
 Every used list plugin on the page can simultaneously also be reached as a RSS feed.
 To achieve this, it's enough to add `?type=1598538810` to the URL and there you go, you have your RSS feed with all the settings from the corresponding list plugin.
 
-**Examples**: 
+**Examples**:
+
 * https://example.com/blog?type=1598538810
 * https://example.com/blog/category-1?type=1598538810
 
@@ -25,7 +23,7 @@ Note: When a page contains multiple list plugins, the settings of the first elem
 
 If you use the `Configuration/Site/config.yaml` in your site configuration, you can also call `/rss.xml` instead of the type URL.
 
-**Examples**: 
+**Examples**:
 
 * https://example.com/blog/rss.xml
 * https://example.com/blog/category-1/rss.xml
