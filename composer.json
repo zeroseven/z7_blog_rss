@@ -17,7 +17,7 @@
   ],
   "require": {
     "typo3/cms-core": "^9.5 || ^10.4",
-    "zeroseven/z7-blog": "^1.0"
+    "zeroseven/z7-blog": "^1.0 || ^1.1"
   },
   "autoload": {
     "psr-4": {
