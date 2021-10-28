@@ -2,7 +2,7 @@
   "name": "zeroseven/z7-blog-rss",
   "license": "GPL-2.0-only",
   "type": "typo3-cms-extension",
-  "description": "z7_blog RSS-feed",
+  "description": "RSS-feed for extension z7_blog",
   "authors": [
     {
       "name": "zeroseven design studios GmbH",
@@ -17,7 +17,7 @@
   ],
   "require": {
     "typo3/cms-core": "^9.5 || ^10.4 || ^11.0",
-    "zeroseven/z7-blog": "^1.0 || ^1.1 || dev-feature/compatibility-typo3-11"
+    "zeroseven/z7-blog": "~1.0.0 || ~1.1.0 || ~1.2.0"
   },
   "autoload": {
     "psr-4": {
