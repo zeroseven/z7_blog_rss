@@ -30,6 +30,16 @@
   "extra": {
     "typo3/cms": {
       "extension-key": "z7_blog_rss"
+    },
+    "scripts": {
+      "prepare-release": [
+        "rm .editorconfig",
+        "rm .gitattributes",
+        "rm .gitignore",
+        "rm -rf .github",
+        "rm .gitlab-ci.yml",
+        "rm .satisinclude"
+      ]
     }
   }
 }
