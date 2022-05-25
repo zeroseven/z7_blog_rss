@@ -24,9 +24,6 @@
       "Zeroseven\\Z7BlogRss\\": "Classes"
     }
   },
-  "replace": {
-    "zeroseven/z7-blog-rss": "self.version"
-  },
   "extra": {
     "typo3/cms": {
       "extension-key": "z7_blog_rss"
