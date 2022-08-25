@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Zeroseven\Z7BlogRss\ViewHelpers;
 
-use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 
 class LanguageViewHelper extends AbstractTagBasedViewHelper

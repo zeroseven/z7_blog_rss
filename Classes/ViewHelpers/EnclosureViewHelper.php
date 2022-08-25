@@ -6,7 +6,6 @@ namespace Zeroseven\Z7BlogRss\ViewHelpers;
 
 use Closure;
 use TYPO3\CMS\Fluid\ViewHelpers\Uri\ImageViewHelper;
-use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 
 class EnclosureViewHelper extends ImageViewHelper
@@ -25,7 +24,7 @@ class EnclosureViewHelper extends ImageViewHelper
         $url = parent::renderStatic(array_merge($arguments, ['absolute' => true]), $renderChildrenClosure, $renderingContext);
 
         // Add data of processed image
-        if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController && ($lastImageInfo = $GLOBALS['TSFE']->lastImageInfo ?? null) && $processedImage = $lastImageInfo['processedFile'] ?? $lastImageInfo['originalFile']) {
+        if (($lastImageInfo = $GLOBALS['TSFE']->lastImageInfo ?? null) && $processedImage = ($lastImageInfo['processedFile'] ?? $lastImageInfo['originalFile'])) {
             $length = $processedImage->getSize();
             $type = $processedImage->getMimeType();
 
