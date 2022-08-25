@@ -23,8 +23,8 @@ class Exception
      */
     public function throw(string $content, array $configuration): void
     {
-        $status = (int)$configuration['status'];
-        $message = $configuration['message'];
+        $status = (int)($configuration['status'] ?? 0);
+        $message = $configuration['message'] ?? 'Missing key "message" in exception configuration!';
 
         if ($status === 401) {
             throw new UnauthorizedException($message ?? null, 1598650191);

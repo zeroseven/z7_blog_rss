@@ -25,7 +25,7 @@ class EnclosureViewHelper extends ImageViewHelper
         $url = parent::renderStatic(array_merge($arguments, ['absolute' => true]), $renderChildrenClosure, $renderingContext);
 
         // Add data of processed image
-        if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController && ($lastImageInfo = $GLOBALS['TSFE']->lastImageInfo) && $processedImage = $lastImageInfo['processedFile'] ?? $lastImageInfo['originalFile']) {
+        if (($lastImageInfo = $GLOBALS['TSFE']->lastImageInfo ?? null) && $processedImage = $lastImageInfo['processedFile'] ?? $lastImageInfo['originalFile']) {
             $length = $processedImage->getSize();
             $type = $processedImage->getMimeType();
 

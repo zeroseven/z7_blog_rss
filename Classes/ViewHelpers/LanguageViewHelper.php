@@ -13,7 +13,7 @@ class LanguageViewHelper extends AbstractTagBasedViewHelper
 
     public function render(): string
     {
-        if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController && $language = $GLOBALS['TSFE']->config['config']['language'] ?? null) {
+        if ($language = $GLOBALS['TSFE']->config['config']['language'] ?? null) {
             $this->tag->setContent($language);
             return $this->tag->render();
         }
