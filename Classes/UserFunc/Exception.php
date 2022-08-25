@@ -24,24 +24,24 @@ class Exception
     public function throw(string $content, array $configuration): void
     {
         $status = (int)($configuration['status'] ?? 0);
-        $message = $configuration['message'] ?? 'Missing key "message" in exception configuration!';
+        $message = (string)($configuration['message'] ?? 'Missing key "message" in exception configuration!');
 
         if ($status === 401) {
-            throw new UnauthorizedException($message ?? null, 1598650191);
+            throw new UnauthorizedException($message, 1598650191);
         }
 
         if ($status === 403) {
-            throw new ForbiddenException($message ?? null, 1598650192);
+            throw new ForbiddenException($message, 1598650192);
         }
 
         if ($status === 404) {
-            throw new PageNotFoundException($message ?? null, 1598650193);
+            throw new PageNotFoundException($message, 1598650193);
         }
 
         if ($status === 503) {
-            throw new ServiceUnavailableException($message ?? null, 1598650194);
+            throw new ServiceUnavailableException($message, 1598650194);
         }
 
-        throw new BadRequestException($message ?? null, 1598650195);
+        throw new BadRequestException($message, 1598650195);
     }
 }
