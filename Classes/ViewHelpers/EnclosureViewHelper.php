@@ -4,18 +4,20 @@ declare(strict_types=1);
 
 namespace Zeroseven\Z7BlogRss\ViewHelpers;
 
+use Closure;
 use TYPO3\CMS\Fluid\ViewHelpers\Uri\ImageViewHelper;
+use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 
 class EnclosureViewHelper extends ImageViewHelper
 {
     protected $escapeOutput = false;
 
-    public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext)
+    public static function renderStatic(array $arguments, Closure $renderChildrenClosure, RenderingContextInterface $renderingContext): string
     {
 
         // Abort, if no image is given
-        if (empty($arguments['src']) && $arguments['image'] === null) {
+        if (empty($arguments['src']) && empty($arguments['image'])) {
             return '';
         }
 
@@ -23,7 +25,7 @@ class EnclosureViewHelper extends ImageViewHelper
         $url = parent::renderStatic(array_merge($arguments, ['absolute' => true]), $renderChildrenClosure, $renderingContext);
 
         // Add data of processed image
-        if (($lastImageInfo = $GLOBALS['TSFE']->lastImageInfo) && $processedImage = $lastImageInfo['processedFile'] ?? $lastImageInfo['originalFile']) {
+        if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController && ($lastImageInfo = $GLOBALS['TSFE']->lastImageInfo) && $processedImage = $lastImageInfo['processedFile'] ?? $lastImageInfo['originalFile']) {
             $length = $processedImage->getSize();
             $type = $processedImage->getMimeType();
 

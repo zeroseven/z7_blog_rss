@@ -12,6 +12,15 @@ use TYPO3\CMS\Core\Error\Http\UnauthorizedException;
 
 class Exception
 {
+    /**
+     * @param string $content
+     * @param array $configuration
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws PageNotFoundException
+     * @throws ServiceUnavailableException
+     * @throws UnauthorizedException
+     */
     public function throw(string $content, array $configuration): void
     {
         $status = (int)$configuration['status'];
