@@ -35,7 +35,6 @@
         "rm .gitignore",
         "rm -rf .github",
         "rm .gitlab-ci.yml",
-        "rm .satisinclude"
       ]
     }
   }
