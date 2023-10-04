@@ -1,4 +1,14 @@
+![maintenance-status](https://img.shields.io/badge/maintenance-deprecated-red.svg)
+
 # RSS feed for [z7_blog](https://github.com/zeroseven/z7_blog)
+
+## DEPRECATED
+
+This extension is replaced by the [pagebased_blog](https://github.com/zeroseven/pagebased_blog) (powered by [pagebased](https://github.com/zeroseven/pagebased)), it's new and shiny successor with more functionality and a huge perfomance boost. 
+
+Thank you for using and liking our blog extension in the past.
+
+---
 
 You want a RSS feed for your blog, be super flexible and with the least amount of work possible? You've come to the right place.
 Install the extension, enter the URL and you're done!
